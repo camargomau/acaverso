@@ -1,69 +1,48 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #99f79648; /* Verde pastel */
-    color: #ffffff; /* Blanco */
-  }
-  
-  header {
-    background-color: #a5eea9; /* Verde pastel */
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: max-content;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .top-bar h1 {
-    margin: 0;
-    flex: 1;
-    text-align: center;
-    align-items: center;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  .right-corner {
-    margin-right: 20px;
-    margin-left: auto;
-  }
-
-  .right-corner img {
-    width: 15%; 
-    height: auto; 
-  }
-  
-  nav ul {
-    list-style-type: none;
+body, h1, img {
     margin: 0;
     padding: 0;
-    align-items: center;
-    position: relative;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-    align-items: center;
-    position: relative;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    align-items: center;
-    position: relative;
-  }
-  
+    border: 0;
+}
+
+.header {
+    background-color: #0099CC;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.logo h1 {
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    width: 20%;
+}
+
+.icon {
+    padding: 10px;
+    text-align: center; /* Center icons if they are smaller than their containers */
+}
+
+.icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feed {
+    width: 80%;
+    padding: 10px;
+    text-align: center; /* Center the image */
+}
+
+.feed img {
+    max-width: 100%;
+    height: auto;
+}

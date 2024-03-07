@@ -1,103 +1,48 @@
-body{
-    font-family: Arial, sans-serif;
+body, h1, img {
     margin: 0;
     padding: 0;
-    background-color: #f0eed6;
+    border: 0;
+}
+
+.header {
+    background-color: #0099CC;
+    padding: 10px 0;
     text-align: center;
-    }
-
-.encabezado{
-    width: 50%;
-    margin: 40px auto;
-    background-color: #427ac1;
-    padding: 10px;
-    border-radius: 45px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-         }
-         
-.contenedor{
-    width: 70%;
-    margin: 5px auto;
-    background-color: #f0eed6;
-    
-    height: 100%;
+    color: white;
+    font-size: 2em;
 }
 
-.left-side img {
-    width: 100%; 
-    height: 100%; 
-  }
-
-a{
-    color:#333;
-    text-decoration: none;
+.logo h1 {
+    font-family: Arial, sans-serif;
 }
-.flex{
+
+.main-content {
     display: flex;
 }
 
-a:hover{
-    color: whitesmoke;
-    text-decoration: solid;
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    width: 20%;
 }
 
-.row1 {
-    border-radius: 5px 30px 30px 5px; 
-    border: 2px ;
-    height: 100%;
-    width: 5%;
-    background-color: #427ac1;
-
+.icon {
+    padding: 10px;
+    text-align: center; /* Center icons if they are smaller than their containers */
 }
 
-.row2 {
-    border: 2px ;
-    height: 100%;
-    width: 90%;
-    
+.icon img {
+    max-width: 100%;
+    height: auto;
 }
 
-.topbar{
-    width: 75%;
-    margin: 10px auto;
-    background-color: #a4d4f6;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
-
-nav{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    position: relative;
-   }
-
-.list{
-    list-style-type: none;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    padding: 0;
-    align-items: center;
-    position: relative;
+.feed {
+    width: 80%;
+    padding: 10px;
+    text-align: center; /* Center the image */
 }
 
-nav ul {
-    display: inline;
-    margin-right: 20px;
-    margin-top: 20px;
-    align-items: center;
-    position: relative;
-}
-
-h1{
-    color: whitesmoke;
-}
-
-p{
-    color: #666;
+.feed img {
+    max-width: 100%;
+    height: auto;
 }
