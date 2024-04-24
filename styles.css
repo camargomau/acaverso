@@ -1,0 +1,80 @@
+/* Basic reset for body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the navigation bar */
+nav#navbar {
+    display: flex;
+    flex-direction: column; /* Vertical bar for desktop */
+    justify-content: start;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+}
+
+/* Navigation items */
+.nav-item {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon styling */
+.nav-item img {
+    margin-right: 10px;
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Hover effect for nav items */
+.nav-item:hover {
+    background-color: #555;
+}
+
+/* Main content styling */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 100%; /* Adjust content height */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    nav#navbar {
+        flex-direction: row; /* Horizontal bar for mobile */
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0; /* Position at the bottom */
+        left: 0;
+        align-items: center;
+        z-index: 1000; /* Ensure it stays on top of other content */
+        top: auto; /* Override top positioning */
+    }
+
+    .nav-item {
+        flex-grow: 1;
+        justify-content: center;
+        padding: 10px 5px;
+        font-size: 0; /* Hide text */
+    }
+
+    .nav-item img {
+        margin: 0;
+    }
+
+    .content {
+        margin: 0;
+        padding: 20px;
+        padding-bottom: 80px; /* Add padding at the bottom to avoid content being hidden by nav bar */
+        margin-top: 0px; /* Ensure content is not pushed down by nav */
+    }
+}
