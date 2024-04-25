@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acaverso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <nav id="navbar">
-        <a href="#home" class="nav-item"><i data-lucide="home"></i>Inicio</a>
-        <a href="#home" class="nav-item"><i data-lucide="home"></i> Anuncios</a>
-        <a href="#home" class="nav-item"><i data-lucide="home"></i> Estudios</a>
-        <a href="#home" class="nav-item"><i data-lucide="home"></i> Ventas</a>
-        <a href="#home" class="nav-item"><i data-lucide="home"></i> Citas</a>
-        <a href="#home" class="nav-item"><i data-lucide="home"></i> Profesores</a>
-    </nav>
-    <div class="content">
-        <p>El contenido irá justo aquí.</p>
+    <div id="container">
+        <nav id="navbar">
+            <a href="#home" class="nav-item"><i data-lucide="home"></i>Inicio</a>
+            <a href="#home" class="nav-item"><i data-lucide="home"></i> Anuncios</a>
+            <a href="#home" class="nav-item"><i data-lucide="home"></i> Estudios</a>
+            <a href="#home" class="nav-item"><i data-lucide="home"></i> Ventas</a>
+            <a href="#home" class="nav-item"><i data-lucide="home"></i> Citas</a>
+            <a href="#home" class="nav-item"><i data-lucide="home"></i> Profesores</a>
+        </nav>
+
+        <div class="content">
+        <!-- <div id="posts-container"> -->
+            <div class="post">
+                <h2>Título</h2>
+                <p>Descripción</p>
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="buttons">
+                    <i id="like" data-lucide="heart"></i> 52
+                    <i id="share" data-lucide="share"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

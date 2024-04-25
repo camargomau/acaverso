@@ -2,6 +2,10 @@ body, html {
     font-family: Inter;
 }
 
+#container {
+    display: flex;
+}
+
 /* Barra de navegación */
 nav#navbar {
     background-color: #333;
@@ -82,4 +86,52 @@ nav#navbar {
         /* Asegurarse de que el contenido no se empuje por la barra */
         margin-top: 0px;
     }
+}
+
+/* Prettify post appearance */
+.post {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.post img {
+    max-width: 50%; /* Limit the image width to 100% of the post div */
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 10px 0 20px; /* Center the image horizontally within the post div */
+    border-radius: 20px; /* Make the image round by setting the border radius to 50% */
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons svg {
+    scale: 0.8;
+}
+
+.buttons svg:hover {
+    color: red;
+}
+
+#like {
+    margin-right: 3px;
+}
+
+#share {
+    margin-left: 10px;
 }
