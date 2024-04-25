@@ -16,32 +16,73 @@ nav#navbar {
     flex-direction: column;
     height: 100vh;
     /* justify-content: start; */ /* what was this for? */
-    width: 12rem;
-    padding-top: 5vh;
+    width: 13.5rem;
+    padding-top: 0.6rem;
     border-right: 2px solid #ccc;
-    padding-right: 10px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 /* Elementos de la barra de navegación */
-.nav-item {
+.nav-item, #encabezado {
     color: #444;
     display: flex;
-    padding: 10px 20px;
+    padding: 15px 15px;
     /* Centrar el texto relativo a los íconos */
-    align-items: end;
+    align-items: center;
     /* No subrayar los enlaces */
     text-decoration: none;
     font-size: 1.4rem;
-    border-radius: 20px;
+    border-radius: 40px;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: background-color 0.4s ease;
 }
 
 .nav-item:hover {
-    background-color: #ddd;
+    background-color: #ccc;
 }
 
 /* Iconos; se insertan como <i> pero se convierten a <svg> con JS */
 .nav-item svg {
-    margin-right: 0.5em;
+    margin-right: 0.7em;
+    scale: 1.1;
+}
+
+#encabezado {
+    /* border-radius: 0; */
+    /* border-bottom: 2px solid #ccc; */
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    /* margin-right: 0; */
+    border-radius: 20px;
+}
+
+#encabezado-text {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #1e3c70;
+    transition: color 0.2s ease;
+}
+
+#encabezado svg {
+    scale: 1.5;
+    margin-right: 0.7em;
+    transition: color 0.2s ease;
+}
+
+#encabezado:hover #encabezado-text {
+    color: #bb8800;
+}
+
+#encabezado:hover svg {
+    color: #ddd;
+}
+
+#encabezado:hover {
+    background-color: #1e3c70;
 }
 
 
@@ -78,6 +119,7 @@ nav#navbar {
         font-size: 0;
         /* Abarcar toda la width disponible */
         flex-grow: 1;
+        margin-top: 0;
     }
 
     .nav-item svg {
@@ -91,6 +133,10 @@ nav#navbar {
         padding-bottom: 80px;
         /* Asegurarse de que el contenido no se empuje por la barra */
         margin-top: 0px;
+    }
+
+    #encabezado {
+        display: none;
     }
 }
 
