@@ -1,54 +1,58 @@
 body, html {
     font-family: Inter;
+    margin: 0;
 }
 
 #container {
     display: flex;
+    justify-content: center; /* Horizontally center the contents */
 }
 
 /* Barra de navegación */
 nav#navbar {
-    background-color: #333;
+    background-color: white;
     /* Un flex vertical cuando la ventana es grande */
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* Siempre a la izquierda */
-    position: fixed;
-    top: 0;
-    left: 0;
     /* justify-content: start; */ /* what was this for? */
+    width: 12rem;
+    padding-top: 5vh;
+    border-right: 2px solid #ccc;
+    padding-right: 10px;
 }
 
 /* Elementos de la barra de navegación */
 .nav-item {
-    color: white;
+    color: #444;
     display: flex;
     padding: 10px 20px;
     /* Centrar el texto relativo a los íconos */
     align-items: end;
     /* No subrayar los enlaces */
     text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 20px;
 }
 
 .nav-item:hover {
-    background-color: #555;
+    background-color: #ddd;
 }
 
 /* Iconos; se insertan como <i> pero se convierten a <svg> con JS */
 .nav-item svg {
-    margin-right: 7px;
+    margin-right: 0.5em;
 }
 
 
 /* Contenido principal */
 .content {
-    margin-left: 200px;
     padding: 20px;
+    width: 40rem;
 }
 
 /* Disposición con ventana delgada (móviles, etc.) */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     nav#navbar {
         /* Barra de navegación horizontal */
         flex-direction: row;
@@ -63,6 +67,8 @@ nav#navbar {
         align-items: center;
         /* Siempre aparecer sobre el resto del contenido */
         z-index: 1000;
+        padding-top: 0;
+        border-top: 2px solid #ddd;
     }
 
     .nav-item {
@@ -109,9 +115,8 @@ nav#navbar {
 }
 
 .post img {
-    max-width: 50%; /* Limit the image width to 100% of the post div */
-    display: block; /* Ensure the image behaves as a block element */
-    margin: 10px 0 20px; /* Center the image horizontally within the post div */
+    width: 99%;
+    margin-bottom: 10px;
     border-radius: 20px; /* Make the image round by setting the border radius to 50% */
 }
 
