@@ -94,12 +94,13 @@ nav#navbar {
 
 @media (max-width: 1125px) {
     nav#navbar {
-        width: 4.4rem;
+        width: 4.3rem;
         left: calc(50vw - 25.8rem);
     }
 
     .nav-item, #encabezado-text {
         font-size: 0;
+        justify-content: center;
     }
 
     .nav-item svg, #encabezado svg {
@@ -128,7 +129,6 @@ nav#navbar {
     }
 
     .nav-item {
-        justify-content: center;
         padding: 10px 5px;
         /* No mostrar el texto */
         font-size: 0;
