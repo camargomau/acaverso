@@ -1,15 +1,20 @@
+/* General Styles */
+* {
+    font-family: Inter;
+    box-sizing: border-box;
+}
+
 body,
 html {
-    font-family: Inter;
     margin: 0;
 }
 
+/* Navigation Styles */
 #content {
     display: flex;
     justify-content: center;
 }
 
-/* Navigation bar */
 nav#navbar {
     background-color: white;
     display: flex;
@@ -23,7 +28,6 @@ nav#navbar {
     left: calc(50vw - 35rem);
 }
 
-/* Navigation bar items */
 .nav-item,
 #encabezado {
     color: #444;
@@ -41,11 +45,18 @@ nav#navbar {
     background-color: #ccc;
 }
 
-/* Icons */
+.nav-item.active {
+    font-weight: bold;
+}
+
+.nav-item.active svg {
+    fill: #444;
+}
+
 .nav-item svg,
 #encabezado svg {
     margin-right: 0.7em;
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 #encabezado {
@@ -62,7 +73,7 @@ nav#navbar {
 }
 
 #encabezado svg {
-    scale: 1.5;
+    transform: scale(1.5);
     margin-right: 0.7em;
     transition: color 0.2s ease;
 }
@@ -79,10 +90,12 @@ nav#navbar {
     background-color: #1e3c70;
 }
 
-/* Main content */
+/* Main Content Styles */
 #posts-container {
     padding: 20px;
     width: 40rem;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1125px) {
@@ -103,7 +116,7 @@ nav#navbar {
     }
 }
 
-/* Mobile view */
+/* Mobile View Styles */
 @media (max-width: 820px) {
     nav#navbar {
         flex-direction: row;
@@ -142,7 +155,7 @@ nav#navbar {
     }
 }
 
-/* Post styling */
+/* Post Styles */
 .post {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -172,21 +185,24 @@ nav#navbar {
 
 .post .author-text .date {
     font-size: 0.85em;
+    margin-top: 2px;
 }
 
 .post .body {
     margin-top: 20px;
 }
 
-.post .body h2 {
+.post .body h2,
+.post .body p {
     color: #444;
+}
+
+.post .body h2 {
     font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .post .body p {
-    color: #444;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -197,7 +213,7 @@ nav#navbar {
     border-radius: 20px;
 }
 
-
+/* Button Styles */
 .buttons {
     display: flex;
     align-items: center;
@@ -205,7 +221,7 @@ nav#navbar {
 }
 
 .buttons svg {
-    scale: 0.8;
+    transform: scale(0.8);
 }
 
 .buttons svg:hover {
@@ -218,4 +234,23 @@ nav#navbar {
 
 #share {
     margin-left: 10px;
+}
+
+/* Select Styles */
+select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #555;
+    transition: border-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+select:hover,
+select:focus {
+    border-color: #1e3c70;
+    outline: none;
 }
