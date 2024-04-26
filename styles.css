@@ -1,21 +1,20 @@
-body, html {
+body,
+html {
     font-family: Inter;
     margin: 0;
 }
 
-#container {
+#content {
     display: flex;
-    justify-content: center; /* Horizontally center the contents */
+    justify-content: center;
 }
 
-/* Barra de navegación */
+/* Navigation bar */
 nav#navbar {
     background-color: white;
-    /* Un flex vertical cuando la ventana es grande */
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* justify-content: start; */ /* what was this for? */
     width: 13.5rem;
     padding-top: 0.6rem;
     border-right: 2px solid #ccc;
@@ -24,20 +23,17 @@ nav#navbar {
     left: calc(50vw - 35rem);
 }
 
-/* Elementos de la barra de navegación */
-.nav-item, #encabezado {
+/* Navigation bar items */
+.nav-item,
+#encabezado {
     color: #444;
     display: flex;
     padding: 15px 15px;
-    /* Centrar el texto relativo a los íconos */
     align-items: center;
-    /* No subrayar los enlaces */
     text-decoration: none;
     font-size: 1.4rem;
     border-radius: 40px;
-    margin-right: 5px;
-    margin-left: 10px;
-    margin-top: 5px;
+    margin: 5px 5px 5px 10px;
     transition: background-color 0.4s ease;
 }
 
@@ -45,18 +41,16 @@ nav#navbar {
     background-color: #ccc;
 }
 
-/* Iconos; se insertan como <i> pero se convierten a <svg> con JS */
-.nav-item svg {
+/* Icons */
+.nav-item svg,
+#encabezado svg {
     margin-right: 0.7em;
     scale: 1.1;
 }
 
 #encabezado {
-    /* border-radius: 0; */
-    /* border-bottom: 2px solid #ccc; */
     margin-bottom: 0.5rem;
     padding-bottom: 1rem;
-    /* margin-right: 0; */
     border-radius: 20px;
 }
 
@@ -85,9 +79,8 @@ nav#navbar {
     background-color: #1e3c70;
 }
 
-
-/* Contenido principal */
-.content {
+/* Main content */
+#posts-container {
     padding: 20px;
     width: 40rem;
 }
@@ -98,31 +91,29 @@ nav#navbar {
         left: calc(50vw - 25.8rem);
     }
 
-    .nav-item, #encabezado-text {
+    .nav-item,
+    #encabezado-text {
         font-size: 0;
         justify-content: center;
     }
 
-    .nav-item svg, #encabezado svg {
+    .nav-item svg,
+    #encabezado svg {
         margin: 0;
     }
 }
 
-/* Disposición con ventana delgada (móviles, etc.) */
+/* Mobile view */
 @media (max-width: 820px) {
     nav#navbar {
-        /* Barra de navegación horizontal */
         flex-direction: row;
         width: 100%;
         height: 60px;
-        /* …hasta abajo*/
         position: fixed;
         bottom: 0;
         left: 0;
         top: auto;
-        /* Centrar los íconos relativo a la barra */
         align-items: center;
-        /* Siempre aparecer sobre el resto del contenido */
         z-index: 1000;
         padding-top: 0;
         border-top: 2px solid #ddd;
@@ -130,9 +121,7 @@ nav#navbar {
 
     .nav-item {
         padding: 10px 5px;
-        /* No mostrar el texto */
         font-size: 0;
-        /* Abarcar toda la width disponible */
         flex-grow: 1;
         margin-top: 0;
     }
@@ -141,12 +130,10 @@ nav#navbar {
         margin: 0;
     }
 
-    .content {
+    #posts-container {
         margin: 0;
         padding: 20px;
-        /* Agregar padding para que la barra no lo esconda */
         padding-bottom: 80px;
-        /* Asegurarse de que el contenido no se empuje por la barra */
         margin-top: 0px;
     }
 
@@ -155,7 +142,7 @@ nav#navbar {
     }
 }
 
-/* Prettify post appearance */
+/* Post styling */
 .post {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -163,27 +150,58 @@ nav#navbar {
     margin-bottom: 20px;
 }
 
-.post h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
+.post .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.post p {
+.post .author img {
+    border-radius: 50%;
+    width: 2.5em;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.post .author-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
     color: #666;
+}
+
+.post .author-text .date {
+    font-size: 0.85em;
+}
+
+.post .body {
+    margin-top: 20px;
+}
+
+.post .body h2 {
+    color: #444;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post .body p {
+    color: #444;
     font-size: 16px;
     line-height: 1.5;
 }
 
-.post img {
+.post .body img {
     width: 99%;
-    margin-bottom: 10px;
-    border-radius: 20px; /* Make the image round by setting the border radius to 50% */
+    margin-bottom: 15px;
+    border-radius: 20px;
 }
+
 
 .buttons {
     display: flex;
     align-items: center;
+    color: #555;
 }
 
 .buttons svg {
@@ -191,7 +209,7 @@ nav#navbar {
 }
 
 .buttons svg:hover {
-    color: red;
+    fill: rgb(214, 8, 8);
 }
 
 #like {
