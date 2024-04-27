@@ -52,6 +52,11 @@ nav#navbar {
     fill: #444;
 }
 
+.nav-item.about {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
 .nav-item svg,
 #encabezado svg {
     margin-right: 0.7em;
@@ -140,6 +145,11 @@ nav#navbar {
 
     .nav-item svg {
         margin: 0;
+    }
+
+    .nav-item.about {
+        margin-top: 0;
+        margin-bottom: 5px;
     }
 
     #posts-container {
