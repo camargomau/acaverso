@@ -31,7 +31,7 @@ nav#navbar {
 #encabezado {
     color: #444;
     display: flex;
-    padding: 15px 15px;
+    padding: 15px;
     align-items: center;
     text-decoration: none;
     font-size: 1.4rem;
@@ -140,7 +140,6 @@ nav#navbar {
         padding: 10px 5px;
         font-size: 0;
         flex-grow: 1;
-        flex-shrink: 1;
         margin-top: 0;
     }
 
@@ -256,14 +255,21 @@ nav#navbar {
     color: #555;
     font-size: 1em;
     font-weight: bold;
-    margin-left: auto;
     padding: 7px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
 }
 
 .action-button:hover {
     color: #ddd;
     background-color: #1e3c70;
+    cursor: pointer;
+}
+
+.action-button.sales-button {
+    margin-left: auto;
 }
 
 #like {
@@ -275,7 +281,8 @@ nav#navbar {
 }
 
 /* Select Styles */
-#career-selector {
+#career-selector,
+#prof-comment select {
     margin-bottom: 20px;
     padding: 10px;
     border: 2px solid #ccc;
@@ -288,20 +295,7 @@ nav#navbar {
 }
 
 #career-selector:hover,
-#career-selector:focus {
-    border-color: #1e3c70;
-    outline: none;
-}
-
-#prof-comment select {
-    padding: 5px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    color: #555;
-    transition: border-color 0.3s ease;
-}
-
+#career-selector:focus,
 #prof-comment select:hover,
 #prof-comment select:focus {
     border-color: #1e3c70;
@@ -335,4 +329,35 @@ nav#navbar {
 #prof-comment textarea:focus {
     border-color: #1e3c70;
     outline: none;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+#date-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#date-buttons .action-button {
+    transition: opacity 0.25s ease;
+}
+
+#date-buttons .prev-btn {
+    opacity: 0;
+}
+
+.carousel .post .author {
+    font-size: 1.5em;
 }

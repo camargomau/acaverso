@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acaverso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="content">
+
+        <nav id="navbar">
+            <a id="encabezado" href="index.html"><i id="encabezado-icon" data-lucide="book-a"></i><span id="encabezado-text">Acaverso</span></a>
+            <a href="index.html" class="nav-item"><i data-lucide="home"></i>Inicio</a>
+            <a href="anuncios.html" class="nav-item"><i data-lucide="megaphone"></i>Anuncios</a>
+            <a href="estudios.html" class="nav-item"><i data-lucide="graduation-cap"></i>Estudios</a>
+            <a href="ventas.html" class="nav-item"><i data-lucide="badge-dollar-sign"></i>Ventas</a>
+            <a href="citas.html" class="nav-item active"><i data-lucide="message-circle-heart"></i>Citas</a>
+            <a href="profesores.html" class="nav-item"><i data-lucide="school"></i>Profesores</a>
+            <a href="acerca.html" class="nav-item about"><i data-lucide="info"></i>Acerca</a>
+        </nav>
+
+        <div id="posts-container" class="carousel">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="slide">
+                        <div class="post">
+                            <div class="author">
+                                <img src="https://i.etsystatic.com/23857081/r/il/2db8e5/2783944081/il_1080xN.2783944081_svld.jpg">
+                                <div class="author-text">
+                                    <span><b>Han-Tyumi</b></span>
+                                    <span class="date">25 años</span>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <p>Parque nacional y reserva Kluane en Canadá. Fotografía por Kalen Emsley.</p>
+                                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="post">
+                            <div class="author">
+                                <img src="https://music-b26f.kxcdn.com/wp-content/uploads/2023/05/King-Gizzard-and-the-Lizard-Wizard-Album-Cover-768x768.jpg">
+                                <div class="author-text">
+                                    <span><b>Gila Monster</b></span>
+                                    <span class="date">6 meses</span>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <h2>Crocodile obsolete</h2>
+                                <p>Audi mea verba, oh ignis draconis, ex cineribus orior, altius atque altius, alis patentibus, lumine micante, draco hic apparere debet, in loco subter. Ex profunditate antiquae doctrinae, ad caelos supra semper, hoc incantamentum evoco, draco apparet, incantametum iam transactum est. </p>
+                            </div>
+                            <div class="buttons">
+                                <i id="like" data-lucide="heart"></i>16
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="date-buttons">
+                    <button class="action-button prev-btn"><i data-lucide="corner-up-left"></i></button>
+                    <button class="action-button"><i data-lucide="message-circle-heart"></i>&nbsp; Mensaje</button>
+                    <button class="action-button next-btn"><i data-lucide="corner-up-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
