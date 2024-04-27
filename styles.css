@@ -212,6 +212,10 @@ nav#navbar {
     border-radius: 20px;
 }
 
+.post .price {
+    color: #666;
+}
+
 /* Button Styles */
 .buttons {
     display: flex;
@@ -225,6 +229,23 @@ nav#navbar {
 
 .buttons svg:hover {
     fill: rgb(214, 8, 8);
+}
+
+.buttons .sales-contact {
+    background-color: inherit;
+    border: 2px solid #555;
+    border-radius: 5px;
+    color: #555;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: auto;
+    padding: 7px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .sales-contact:hover {
+    color: #ddd;
+    background-color: #1e3c70;
 }
 
 #like {
