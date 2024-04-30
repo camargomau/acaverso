@@ -106,8 +106,12 @@ nav#navbar {
     color: var(--unam-gold);
 }
 
-:not.night #encabezado:hover svg {
+#encabezado:hover svg {
     color: var(--discrete-border);
+}
+
+.night #encabezado:hover svg {
+    color: var(--primary-text);
 }
 
 #encabezado:hover {
