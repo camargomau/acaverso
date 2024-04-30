@@ -1,6 +1,13 @@
-:root {
-    --background: #fff;
-    --deep-background: #f9f9f9;
+/* General Styles */
+* {
+    font-family: Inter;
+}
+
+body {
+    margin: 0;
+    background-color: #fcfcfc;
+    --navbar-background: #fcfcfc;
+    --contrast-background: #f9f9f9;
     --primary-text: #444;
     --secondary-text: #666;
     --discrete-border: #ccc;
@@ -10,14 +17,15 @@
     --unam-gold: #bb8800;
 }
 
-/* General Styles */
-* {
-    font-family: Inter;
-}
-
-body,
-html {
-    margin: 0;
+body.night {
+    background-color: #111;
+    --navbar-background: #111;
+    --contrast-background: #222;
+    --primary-text: #bbb;
+    --secondary-text: #aaa;
+    --discrete-border: #444;
+    --button-border: #999;
+    --unam-blue: #2c4c83;
 }
 
 /* Navigation Styles */
@@ -27,7 +35,7 @@ html {
 }
 
 nav#navbar {
-    background-color: var(--background);
+    background-color: var(--navbar-background);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -98,7 +106,7 @@ nav#navbar {
     color: var(--unam-gold);
 }
 
-#encabezado:hover svg {
+:not.night #encabezado:hover svg {
     color: var(--discrete-border);
 }
 
@@ -178,7 +186,7 @@ nav#navbar {
 
 /* Post Styles */
 .post {
-    background-color: var(--deep-background);
+    background-color: var(--contrast-background);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -261,7 +269,7 @@ nav#navbar {
 }
 
 .action-button {
-    background-color: var(--deep-background);
+    background-color: var(--contrast-background);
     border: 2px solid var(--button-border);
     border-radius: 7px;
     color: var(--primary-text);
@@ -299,7 +307,7 @@ nav#navbar {
     padding: 10px;
     border: 2px solid var(--discrete-border);
     border-radius: 5px;
-    background-color: var(--deep-background);
+    background-color: var(--contrast-background);
     color: var(--primary-text);
     transition: border-color 0.3s ease;
     font-weight: bold;
