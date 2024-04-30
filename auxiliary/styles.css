@@ -1,3 +1,15 @@
+:root {
+    --background: #fff;
+    --deep-background: #f9f9f9;
+    --primary-text: #444;
+    --secondary-text: #666;
+    --discrete-border: #ccc;
+    --button-border: #999;
+    --red: #d60808;
+    --unam-blue: #1e3c70;
+    --unam-gold: #bb8800;
+}
+
 /* General Styles */
 * {
     font-family: Inter;
@@ -15,13 +27,13 @@ html {
 }
 
 nav#navbar {
-    background-color: white;
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 13.5rem;
     padding-top: 0.6rem;
-    border-right: 2px solid #ccc;
+    border-right: 2px solid var(--discrete-border);
     position: fixed;
     top: 0;
     left: calc(50vw - 35rem);
@@ -29,10 +41,10 @@ nav#navbar {
 
 .nav-item,
 #encabezado {
-    color: #444;
+    color: var(--primary-text);
     display: flex;
-    padding: 15px;
     align-items: center;
+    padding: 15px;
     text-decoration: none;
     font-size: 1.4rem;
     border-radius: 40px;
@@ -41,7 +53,7 @@ nav#navbar {
 }
 
 .nav-item:hover {
-    background-color: #ccc;
+    background-color: var(--discrete-border);
 }
 
 .nav-item.active {
@@ -49,10 +61,10 @@ nav#navbar {
 }
 
 .nav-item.active svg {
-    fill: #444;
+    fill: var(--primary-text);
 }
-
 .nav-item.about {
+
     margin-top: auto;
     margin-bottom: 2rem;
 }
@@ -72,7 +84,7 @@ nav#navbar {
 #encabezado-text {
     font-size: 1.7rem;
     font-weight: bold;
-    color: #1e3c70;
+    color: var(--unam-blue);
     transition: color 0.2s ease;
 }
 
@@ -83,15 +95,15 @@ nav#navbar {
 }
 
 #encabezado:hover #encabezado-text {
-    color: #bb8800;
+    color: var(--unam-gold);
 }
 
 #encabezado:hover svg {
-    color: #ddd;
+    color: var(--discrete-border);
 }
 
 #encabezado:hover {
-    background-color: #1e3c70;
+    background-color: var(--unam-blue);
 }
 
 /* Main Content Styles */
@@ -133,7 +145,7 @@ nav#navbar {
         align-items: center;
         z-index: 1000;
         padding-top: 0;
-        border-top: 2px solid #ddd;
+        border-top: 2px solid var(--discrete-border);
     }
 
     .nav-item {
@@ -166,7 +178,7 @@ nav#navbar {
 
 /* Post Styles */
 .post {
-    background-color: #f9f9f9;
+    background-color: var(--deep-background);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -189,7 +201,7 @@ nav#navbar {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    color: #666;
+    color: var(--secondary-text);
 }
 
 .post .author-text .date {
@@ -206,10 +218,10 @@ nav#navbar {
 .post .body h4,
 .post .body p,
 .post .body ul {
-    color: #444;
+    color: var(--primary-text);
 }
-
 .post .body h2 {
+
     font-size: 24px;
     margin: 0;
 }
@@ -230,32 +242,32 @@ nav#navbar {
 }
 
 .post .price {
-    color: #666;
+    color: var(--secondary-text);
 }
 
 /* Button Styles */
 .buttons {
     display: flex;
     align-items: center;
-    color: #555;
+    color: var(--primary-text);
 }
-
 .buttons svg {
+
     transform: scale(0.8);
 }
 
 .buttons svg:hover {
-    fill: rgb(214, 8, 8);
+    fill: var(--red);
 }
 
 .action-button {
-    background-color: #f9f9f9;
-    border: 2px solid #999;
+    background-color: var(--deep-background);
+    border: 2px solid var(--button-border);
     border-radius: 7px;
-    color: #555;
+    color: var(--primary-text);
     font-size: 1em;
-    font-weight: bold;
     padding: 7px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
     cursor: pointer;
     display: inline-flex;
@@ -263,8 +275,8 @@ nav#navbar {
 }
 
 .action-button:hover {
-    color: #ddd;
-    background-color: #1e3c70;
+    color: var(--discrete-border);
+    background-color: var(--unam-blue);
     cursor: pointer;
 }
 
@@ -285,20 +297,20 @@ nav#navbar {
 #prof-comment select {
     margin-bottom: 20px;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--discrete-border);
     border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #555;
+    background-color: var(--deep-background);
+    color: var(--primary-text);
     transition: border-color 0.3s ease;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
 }
 
 #career-selector:hover,
 #career-selector:focus,
 #prof-comment select:hover,
 #prof-comment select:focus {
-    border-color: #1e3c70;
+    border-color: var(--unam-blue);
     outline: none;
 }
 
@@ -323,18 +335,18 @@ nav#navbar {
 #prof-comment input[type="text"],
 #prof-comment textarea {
     padding: 5px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--discrete-border);
     border-radius: 5px;
     background-color: white;
-    color: #555;
+    color: var(--primary-text);
     transition: border-color 0.3s ease;
-}
 
+}
 #prof-comment input[type="text"]:hover,
 #prof-comment input[type="text"]:focus,
 #prof-comment textarea:hover,
 #prof-comment textarea:focus {
-    border-color: #1e3c70;
+    border-color: var(--unam-blue);
     outline: none;
 }
 
