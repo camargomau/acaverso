@@ -101,7 +101,7 @@
                     }
                 }
             } else {
-                echo "<p>Ninguna publicación.</p>";
+                echo "<p>Ninguna publicación encontrada.</p>";
             }
             ?>
         </div>
