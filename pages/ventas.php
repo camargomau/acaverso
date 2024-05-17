@@ -32,9 +32,9 @@
 
             <div class="post">
                 <?php
-                include "../auxiliary/config-local.php";
+                include "../auxiliary/config-remote.php";
 
-                $sql = "SELECT * FROM ventas"; // Change your_table_name to the actual name of your table
+                $sql = "SELECT * FROM ventas";
                 $result = $db->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -58,7 +58,7 @@
                         echo '</div>';
                     }
                 } else {
-                    echo "Ningún resultado.";
+                    echo "<p>Ningún resultado.</p>";
                 }
                 $db->close();
                 ?>
