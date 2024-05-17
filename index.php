@@ -8,7 +8,7 @@
 <body>
     <h1>Posts</h1>
     <?php
-    include 'config-remote.php';
+    include 'auxiliary/config-remote.php';
 
     $sql = "SELECT username, content, post_date FROM posts ORDER BY post_date DESC";
     $result = $db->query($sql);
