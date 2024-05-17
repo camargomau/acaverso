@@ -11,9 +11,6 @@ $port = getenv("DB_PORT");
 $db_connection = mysqli_real_connect($db, $hostname, $username, $password, $database, $port, MYSQLI_CLIENT_SSL);
 
 if (!$db_connection) {
-    echo "Connection error";
     die("Connection failed: " . mysqli_connect_error());
-} else {
-    echo "Connected successfully";
 }
 ?>
