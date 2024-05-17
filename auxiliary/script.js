@@ -44,5 +44,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial toggle for buttons
   toggleButtons();
 });
-
-comingSoon = () => alert("Esta funcionalidad será agregada con PHP.")

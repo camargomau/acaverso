@@ -18,14 +18,14 @@
     <div id="content">
 
         <nav id="navbar">
-            <a id="encabezado" href="../index.html"><i id="encabezado-icon" data-lucide="book-a"></i><span id="encabezado-text">Acaverso</span></a>
-            <a href="../index.html" class="nav-item"><i data-lucide="home"></i>Inicio</a>
-            <a href="anuncios.html" class="nav-item"><i data-lucide="megaphone"></i>Anuncios</a>
-            <a href="estudiantes.html" class="nav-item"><i data-lucide="graduation-cap"></i>Estudiantes</a>
-            <a href="ventas.html" class="nav-item"><i data-lucide="badge-dollar-sign"></i>Ventas</a>
-            <a href="citas.html" class="nav-item"><i data-lucide="message-circle-heart"></i>Citas</a>
-            <a href="profesores.html" class="nav-item"><i data-lucide="school"></i>Profesores</a>
-            <a href="acerca.html" class="nav-item about active"><i data-lucide="info"></i>Acerca</a>
+            <a id="encabezado" href="../index.php"><i id="encabezado-icon" data-lucide="book-a"></i><span id="encabezado-text">Acaverso</span></a>
+            <a href="../index.php" class="nav-item"><i data-lucide="home"></i>Inicio</a>
+            <a href="anuncios.php" class="nav-item"><i data-lucide="megaphone"></i>Anuncios</a>
+            <a href="estudiantes.php" class="nav-item"><i data-lucide="graduation-cap"></i>Estudiantes</a>
+            <a href="ventas.php" class="nav-item"><i data-lucide="badge-dollar-sign"></i>Ventas</a>
+            <a href="citas.php" class="nav-item"><i data-lucide="message-circle-heart"></i>Citas</a>
+            <a href="profesores.php" class="nav-item"><i data-lucide="school"></i>Profesores</a>
+            <a href="acerca.php" class="nav-item about active"><i data-lucide="info"></i>Acerca</a>
         </nav>
 
         <div id="posts-container">
