@@ -44,6 +44,7 @@
                 SELECT author_img, author_author, author_date, body_h2, NULL AS body_price, body_p, body_img, like_count, 'estudiantes' AS table_name FROM estudiantes
                 UNION
                 SELECT author_img, author_author, author_date, body_h2, body_price, body_p, body_img, like_count, 'ventas' AS table_name FROM ventas
+                ORDER BY author_date DESC;
             ";
             $result = $db->query($sql);
 
