@@ -29,40 +29,36 @@
         </nav>
 
         <div id="posts-container">
+            <?php
+            include "../auxiliary/config-loader.php";
 
-            <div class="post">
-                <?php
-                include "../auxiliary/config-loader.php";
+            $sql = "SELECT * FROM ventas ORDER BY author_date DESC";
+            $result = $db->query($sql);
 
-                $sql = "SELECT * FROM ventas";
-                $result = $db->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // Output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="post">';
-                        echo '<div class="author">';
-                        echo '<img src="' . $row["author_img"] . '">';
-                        echo '<div class="author-text">';
-                        echo '<span><b>' . $row["author_author"] . '</b></span>';
-                        echo '<span class="date">' . $row["author_date"] . '</span>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '<div class="body">';
-                        echo '<h2>' . $row["body_h2"] . '</h2>';
-                        echo '<h3 class="price">' . $row["body_price"] . '</h3>';
-                        echo $row["body_p"];
-                        echo '<img src="' . $row["body_img"] . '">';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo "<p>Ningún resultado.</p>";
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="post">';
+                    echo '<div class="author">';
+                    echo '<img src="' . $row["author_img"] . '">';
+                    echo '<div class="author-text">';
+                    echo '<span><b>' . $row["author_author"] . '</b></span>';
+                    echo '<span class="date">' . $row["author_date"] . '</span>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="body">';
+                    echo '<h2>' . $row["body_h2"] . '</h2>';
+                    echo '<h3 class="price">' . $row["body_price"] . '</h3>';
+                    echo $row["body_p"];
+                    echo '<img src="' . $row["body_img"] . '">';
+                    echo '</div>';
+                    echo '</div>';
                 }
-                $db->close();
-                ?>
-            </div>
+            } else {
+                echo "<p>Ningún resultado.</p>";
+            }
+            $db->close();
+            ?>
         </div>
     </div>
 
