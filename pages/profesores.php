@@ -23,7 +23,7 @@
             <a href="anuncios.php" class="nav-item"><i data-lucide="megaphone"></i>Anuncios</a>
             <a href="estudiantes.php" class="nav-item"><i data-lucide="graduation-cap"></i>Estudiantes</a>
             <a href="ventas.php" class="nav-item"><i data-lucide="badge-dollar-sign"></i>Ventas</a>
-            <a href="citas.html" class="nav-item"><i data-lucide="message-circle-heart"></i>Citas</a>
+            <a href="citas.php" class="nav-item"><i data-lucide="message-circle-heart"></i>Citas</a>
             <a href="profesores.php" class="nav-item active"><i data-lucide="school"></i>Profesores</a>
             <a href="acerca.php" class="nav-item about"><i data-lucide="info"></i>Acerca</a>
         </nav>
