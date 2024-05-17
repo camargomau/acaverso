@@ -20,42 +20,44 @@
         <nav id="navbar">
             <a id="encabezado" href="../index.html"><i id="encabezado-icon" data-lucide="book-a"></i><span id="encabezado-text">Acaverso</span></a>
             <a href="../index.html" class="nav-item"><i data-lucide="home"></i>Inicio</a>
-            <a href="anuncios.php" class="nav-item"><i data-lucide="megaphone"></i>Anuncios</a>
+            <a href="anuncios.php" class="nav-item active"><i data-lucide="megaphone"></i>Anuncios</a>
             <a href="estudiantes.html" class="nav-item"><i data-lucide="graduation-cap"></i>Estudiantes</a>
             <a href="ventas.php" class="nav-item"><i data-lucide="badge-dollar-sign"></i>Ventas</a>
             <a href="citas.html" class="nav-item"><i data-lucide="message-circle-heart"></i>Citas</a>
             <a href="profesores.php" class="nav-item"><i data-lucide="school"></i>Profesores</a>
-            <a href="acerca.php" class="nav-item about active"><i data-lucide="info"></i>Acerca</a>
+            <a href="acerca.php" class="nav-item about"><i data-lucide="info"></i>Acerca</a>
         </nav>
 
         <div id="posts-container">
+            <?php
+            include "../auxiliary/config-loader.php";
 
-            <div class="post">
-                <div class="body" style="margin-top: 0.5em;">
-                    <h1 style="margin: 0">Acerca</h1>
-                    <p>
-                        <b>Matemáticas Aplicadas y Computación.</b>
-                        <br>
-                        <b>Facultad de Estudiantes Superiores Acatlán.</b>
-                    </p>
-                    <p>
-                        Primer proyecto para <em>Desarrollo Web</em>. Grupo 2602, profesora Alma López Blanco.
-                    </p>
-                    <p>
-                        <a href="https://github.com/camargomau/acaverso">Repositorio GitHub.</a>
-                    </p>
-                    <p>
-                        Elaborado por:
-                    </p>
-                    <ul>
-                        <li>Burciaga Piña Erick Osvaldo</li>
-                        <li>Camargo Badillo Luis Mauricio</li>
-                        <li>Gudiño Romero Miguel Angel</li>
-                        <li>Gutiérrez Flores Daniel</li>
-                    </ul>
-                </div>
-            </div>
+            $sql = "SELECT * FROM anuncios ORDER BY author_date DESC";
+            $result = $db->query($sql);
 
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="post">';
+                    echo '<div class="author">';
+                    echo '<img src="' . $row["author_img"] . '">';
+                    echo '<div class="author-text">';
+                    echo '<span><b>' . $row["author_author"] . '</b></span>';
+                    echo '<span class="date">' . $row["author_date"] . '</span>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="body">';
+                    echo '<h2>' . $row["body_h2"] . '</h2>';
+                    echo $row["body_p"];
+                    echo '<img src="' . $row["body_img"] . '">';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>Ninguna publicación.</p>";
+            }
+            $db->close();
+            ?>
         </div>
     </div>
 
