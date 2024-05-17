@@ -1,6 +1,6 @@
 <?php
 $db = mysqli_init();
-mysqli_ssl_set($db, NULL, NULL, "auxiliary/DigiCertGlobalRootCA.pem", NULL, NULL);
+mysqli_ssl_set($db, NULL, NULL, "../auxiliary/DigiCertGlobalRootCA.pem", NULL, NULL);
 
 $hostname = getenv("DB_HOST");
 $username = getenv("DB_USER");

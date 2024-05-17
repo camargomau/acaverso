@@ -32,7 +32,7 @@
 
             <div class="post">
                 <?php
-                include "../auxiliary/config-remote.php";
+                include "../auxiliary/config-loader.php";
 
                 $sql = "SELECT * FROM ventas";
                 $result = $db->query($sql);

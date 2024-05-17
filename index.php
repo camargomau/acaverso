@@ -8,7 +8,13 @@
 <body>
     <h1>Posts</h1>
     <?php
-    include "auxiliary/config-loader.php";
+    $environment = getenv('ACAVERSO_ENV');
+
+    if ($environment === 'azure') {
+        include 'auxiliary/config-remote.php';
+    } else {
+        include 'auxiliary/config-local.php';
+    }
 
     $sql = "SELECT username, content, post_date FROM posts ORDER BY post_date DESC";
     $result = $db->query($sql);
