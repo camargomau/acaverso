@@ -6,7 +6,7 @@ name: Build and deploy PHP app to Azure Web App - Acaverso
 on:
   push:
     branches:
-      - php
+      - main
   workflow_dispatch:
 
 jobs:
@@ -61,9 +61,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_33F46047A6FF4D3EAC511A3A477D70FB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AADA192E220F41D5B41CBDDF0454B14C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2C33D65F98E24C4B860F16154CF2D9C5 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60D770D96B5D4105A22731004B6FE32B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_759F38A6DDC84D44A4628012D463C3BD }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_058AD327A08E404A86B3FE6C84AB30B5 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
