@@ -44,5 +44,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial toggle for buttons
   toggleButtons();
 });
-
-comentarioProfesor = () => alert("¡Gracias por tus comentarios! Se los haremos llegar a quien corresponda.")

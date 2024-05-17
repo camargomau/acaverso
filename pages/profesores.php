@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="../auxiliary/styles.css">
     <script src="../auxiliary/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="content">
@@ -36,27 +37,27 @@
                         <h1 style="margin: 0">Comentarios sobre Profesores</h1>
                         <h4>Escribe aquí los comentarios que tengas sobre algún profesor.</h4>
 
-                        <select name="carrera" id="carrera-selector">
-                            <option value="actuaria">Actuaría</option>
-                            <option value="arquitectura">Arquitectura</option>
-                            <option value="cd">Ciencia de Datos</option>
-                            <option value="cpap">Ciencias Políticas y Administración Pública</option>
-                            <option value="comunicacion">Comunicación</option>
-                            <option value="derecho">Derecho</option>
-                            <option value="diseno">Diseño Gráfico</option>
-                            <option value="economia">Economía</option>
-                            <option value="ei">Enseñanza del Inglés</option>
-                            <option value="filosofia">Filosofía</option>
-                            <option value="historia">Historia</option>
-                            <option value="ingenieria">Ingeniería Civil</option>
-                            <option value="lengua">Lengua y Literatura Hispánicas</option>
-                            <option value="mac">Matemáticas Aplicadas y Computación</option>
-                            <option value="pedagogia">Pedagogía</option>
-                            <option value="ri">Relaciones Internacionales</option>
-                            <option value="sociologia">Sociología</option>
-                        </select><br><br>
+                        <form id="comentarios-prof">
+                            <select name="carrera" id="carrera-selector">
+                                <option value="actuaria">Actuaría</option>
+                                <option value="arquitectura">Arquitectura</option>
+                                <option value="cd">Ciencia de Datos</option>
+                                <option value="cpap">Ciencias Políticas y Administración Pública</option>
+                                <option value="comunicacion">Comunicación</option>
+                                <option value="derecho">Derecho</option>
+                                <option value="diseno">Diseño Gráfico</option>
+                                <option value="economia">Economía</option>
+                                <option value="ei">Enseñanza del Inglés</option>
+                                <option value="filosofia">Filosofía</option>
+                                <option value="historia">Historia</option>
+                                <option value="ingenieria">Ingeniería Civil</option>
+                                <option value="lengua">Lengua y Literatura Hispánicas</option>
+                                <option value="mac">Matemáticas Aplicadas y Computación</option>
+                                <option value="pedagogia">Pedagogía</option>
+                                <option value="ri">Relaciones Internacionales</option>
+                                <option value="sociologia">Sociología</option>
+                            </select><br><br>
 
-                        <form>
                             <label for="prof-name">Nombre del profesor</label><br>
                             <input type="text" id="prof-name" name="prof-name"><br>
 
@@ -66,7 +67,7 @@
                             <label for="comment">Comentario</label><br>
                             <textarea name="comment" rows="10" cols="20"></textarea>
 
-                            <input type="submit" class="action-button" onclick="comentarioProfesor()" value="Enviar">
+                            <input type="submit" class="action-button" value="Enviar">
                         </form>
                     </span>
                 </div>
@@ -78,6 +79,27 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#comentarios-prof').submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '../auxiliary/profesores-form.php',
+                    data: formData,
+                    success: function(response) {
+                        alert("¡Gracias por tus comentarios! Se los haremos llegar a quien corresponda.");
+                        $('#comentarios-prof')[0].reset();
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Error: " + status + " - " + error);
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
