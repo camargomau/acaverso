@@ -45,4 +45,4 @@ document.addEventListener('DOMContentLoaded', function() {
   toggleButtons();
 });
 
-comingSoon = () => alert("Esta funcionalidad será agregada con PHP.")
+comentarioProfesor = () => alert("¡Gracias por tus comentarios! Se los haremos llegar a quien corresponda.")
